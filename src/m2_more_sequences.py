@@ -185,9 +185,15 @@ def index_of_largest_number(numbers, n):
 
     """
     # ------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #     The testing code is already written for you (above).
     # ------------------------------------------------------------------
+    max_index = 0
+    for k in range(n-1):
+        if numbers[k+1] > numbers[max_index]:
+            max_index = k+1
+    return max_index
+
 
 
 # ----------------------------------------------------------------------
