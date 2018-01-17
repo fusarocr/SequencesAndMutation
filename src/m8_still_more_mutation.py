@@ -149,7 +149,7 @@ def MUTATE_delete_negatives(numbers):
         else:
             numbers[i] = numbers[k]
             i = i + 1
-    for k in range(1, len(numbers) - i + 1, 1):
+    for k in range(0, len(numbers) - i):
         del numbers[-1]
     return None
 
