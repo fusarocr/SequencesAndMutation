@@ -129,7 +129,7 @@ def MUTATE_delete_negatives(numbers):
 
     Precondition: The argument is a list of numbers.
     """
-    # TODO: 3. First, READ THE ABOVE TEST CODE.
+    # DONE: 3. First, READ THE ABOVE TEST CODE.
     #          Make sure that you understand it.
     #          In particular, note how it calls the   run_test   function
     #          from the module   m6_mutation   by using the notation:
@@ -142,6 +142,16 @@ def MUTATE_delete_negatives(numbers):
     #       Take a stab at this problem,
     #       then see the solutions posted on Piazza.
     #       See those solutions even if your approach passes the tests.
+    i = 0
+    for k in range(len(numbers)):
+        if numbers[k] < 0:
+            i = i
+        else:
+            numbers[i] = numbers[k]
+            i = i + 1
+    for k in range(1, len(numbers) - i + 1, 1):
+        del numbers[-1]
+    return None
 
 
 # ----------------------------------------------------------------------
